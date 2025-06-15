@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+nav p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #444;
+}
+
+nav a {
+    color: #444;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #02dc02;
+}
+
+#sec1 {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#sec2 {
+    background: linear-gradient(to bottom left, #edd2f3, #fffcdc, #84dfff);
+    padding: 60px 30px;
+    border-radius: 50px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#intro {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#intro h1 {
+    font-size: 36px;
+    color: #393939;
+    margin-bottom: 30px;
+}
+
+#subMain {
+    font-size: 20px;
+    color: #3e3e3e;
+    margin-bottom: 30px;
+}
+
+#sub2 {
+    font-size: 16px;
+    color: #333;
+}
+
+#start {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#start:hover {
+    background-color: #222;
+}
+
+#why {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 40px 20px;
+}
+
+#whyHab {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#why p {
+    font-size: 22px;
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+#why li {
+    font-size: 18px;
+    margin-left: 40px;
+    margin-bottom: 15px;
+    color: #444;
+    list-style-type: disc;
+}
+
+#style {
+    color: #00a2ff;
+}
+
+#last {
+    margin-top: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#users {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    background: linear-gradient(to bottom, #f7f5f2, #dfdfde, #8d8daa);
+    margin: 50px auto;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: #464646;
+    font-size: 28px;
+    text-align: center;
+    border-right: 1px solid #eee;
+}
+
+.user:last-child {
+    border-right: none;
+}
+
+.user p {
+    max-width: 90%;
+    font-size: 18px;
+}
+
+#sec4, #sec5, #sec6 {
+    margin-top: 20px;
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#sec4 {
+    background-image: url("https://i.pinimg.com/736x/b0/81/72/b08172865cdf966ec9225d7f75208a19.jpg");
+}
+#sec5 {
+    background-image: url("https://i.pinimg.com/736x/5b/7f/d7/5b7fd70f27118531b841ce12d2db24cf.jpg");
+    color: #fde802;
+}
+#sec6 {
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20250205/pngtree-close-up-of-a-countdown-timer-stopwatch-in-focus-image_16897989.jpg");
+    color: #d7d7d7;
+}
+
+#footer {
+    background-color: #6f4124;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+#about a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+#about a:hover {
+    color: #ddd;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#contact a {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+#contact a:hover {
+    transform: scale(1.1);
+}
+
+#copyright {
+    text-align: center;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    #why li {
+        margin-left: 20px;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about {
+        gap: 30px;
+    }
+
+    #contact {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav p {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    #intro h1 {
+        font-size: 28px;
+    }
+
+    #whyHab {
+        font-size: 1.8rem;
+    }
+
+    #why li {
+        font-size: 16px;
+    }
+
+    #sec4, #sec5, #sec6 {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    #contact a {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    #subMain, #sub2 {
+        font-size: 16px;
+    }
+
+    #start {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    #users {
+        grid-template-columns: 1fr;
+    }
+
+    .user {
+        font-size: 22px;
+    }
+
+    .user p {
+        font-size: 16px;
+    }
+
+    #sec4, #sec5, #sec6 {
+        font-size: 14px;
+    }
+}

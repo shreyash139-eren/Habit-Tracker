@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Focus Timer | Habit-Hole</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      height: 60px;
+      background-color: #161b22;
+      border-bottom: 1px solid #30363d;
+    }
+    nav div{
+      display: flex;
+      align-items: center;
+    }
+    nav img{
+      width: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    nav p {
+      font-size: 22px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    nav a {
+      font-size: 18px;
+      color: #c9d1d9;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #3fb950;
+    }
+
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
+
+    #timer {
+      font-size: 60px;
+      margin-bottom: 30px;
+      color: #58a6ff;
+    }
+
+    #container div {
+      text-align: center;
+    }
+
+    #container div button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      margin: 5px;
+      cursor: pointer;
+      background-color: #238636;
+      color: white;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    #container div button:disabled {
+      background-color: #3f4448;
+      cursor: not-allowed;
+    }
+
+    #container div button:hover:not(:disabled) {
+      background-color: #2ea043;
+      transform: scale(1.05);
+    }
+
+    #content {
+      width: 90%;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    #content h2 {
+      color: #f0f6fc;
+      margin-bottom: 15px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      margin: 20px auto;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      #timer {
+        font-size: 42px;
+      }
+
+      #container div button {
+        font-size: 16px;
+        padding: 8px 16px;
+      }
+
+      iframe {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>
+      <img src="https://t3.ftcdn.net/jpg/03/85/64/90/360_F_385649041_vxKgnZR0ZoLefxzY2W4SLjs9EO7Fracd.jpg" alt="">
+      <p id="logo">Habit-Hole</p>
+    </div>
+    <a href="dashboard.html">Back to Home</a>
+  </nav>
+
+  <div id="container">
+    <div>
+      <h2 id="timer">00:00:00</h2>
+      <button id="startBtn">Start</button>
+      <button id="pauseBtn" disabled>Pause</button>
+      <button id="resumeBtn" disabled>Resume</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+
+  <div id="content">
+    <h2>🎧 Stay Focused with Ambient Sounds</h2>
+    <h2>Focus Timer brings you soothing YouTube music without distractions.</h2>
+
+    <iframe src="https://www.youtube-nocookie.com/embed/qQzf-xzZO7M?si=YRuhQ9QwCEMDld5X" allowfullscreen></iframe>
+    <iframe src="https://www.youtube-nocookie.com/embed/xjjpTuG9GyU?si=T4oVWWlrbklF_mf2" allowfullscreen></iframe>
+    <iframe src="https://www.youtube-nocookie.com/embed/lyrJThjjF0g?si=aKwV6jvhCk2TuXuT" allowfullscreen></iframe>
+    <iframe src="https://www.youtube-nocookie.com/embed/QZTDZFtbrec?si=K94BtwAC4yfZ0Bt1" allowfullscreen></iframe>
+    <iframe src="https://www.youtube-nocookie.com/embed/Z8ANihFXlgU?si=Qzc-F7vRCWAodhyY" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    let timerInterval;
+    let elapsed = 0;
+    let isRunning = false;
+
+    const userEmail = localStorage.getItem("email") || "guest_user";
+    const timerKey = `${userEmail}_timer`;
+
+    const timerDisplay = document.getElementById("timer");
+    const startBtn = document.getElementById("startBtn");
+    const pauseBtn = document.getElementById("pauseBtn");
+    const resumeBtn = document.getElementById("resumeBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    if (localStorage.getItem(timerKey)) {
+      elapsed = parseInt(localStorage.getItem(timerKey));
+      updateTimerDisplay();
+    }
+
+    startBtn.addEventListener("click", () => {
+      if (isRunning) return;
+      isRunning = true;
+      startBtn.disabled = true;
+      pauseBtn.disabled = false;
+      resumeBtn.disabled = true;
+
+      timerInterval = setInterval(() => {
+        elapsed++;
+        localStorage.setItem(timerKey, elapsed);
+        updateTimerDisplay();
+      }, 1000);
+    });
+
+    pauseBtn.addEventListener("click", () => {
+      clearInterval(timerInterval);
+      isRunning = false;
+      pauseBtn.disabled = true;
+      resumeBtn.disabled = false;
+    });
+
+    resumeBtn.addEventListener("click", () => {
+      if (isRunning) return;
+      isRunning = true;
+      resumeBtn.disabled = true;
+      pauseBtn.disabled = false;
+
+      timerInterval = setInterval(() => {
+        elapsed++;
+        localStorage.setItem(timerKey, elapsed);
+        updateTimerDisplay();
+      }, 1000);
+    });
+
+    resetBtn.addEventListener("click", () => {
+      clearInterval(timerInterval);
+      isRunning = false;
+      elapsed = 0;
+      localStorage.setItem(timerKey, elapsed);
+      updateTimerDisplay();
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
+      resumeBtn.disabled = true;
+    });
+
+    function updateTimerDisplay() {
+      const hours = Math.floor(elapsed / 3600);
+      const minutes = Math.floor((elapsed % 3600) / 60);
+      const seconds = elapsed % 60;
+      timerDisplay.textContent =
+        `${String(hours).padStart(2, "0")}:` +
+        `${String(minutes).padStart(2, "0")}:` +
+        `${String(seconds).padStart(2, "0")}`;
+    }
+  </script>
+</body>
+</html>

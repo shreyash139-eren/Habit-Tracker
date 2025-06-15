@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/113f6f8016.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=684cae5a220e8f0019b942b7&product=inline-share-buttons&source=platform" async="async"></script>
+
+</head>
+<body>
+    <div id="ham"><i class="fa-solid fa-bars"></i></div>
+    <div id="close"><i class="fa-solid fa-xmark"></i></div>
+  
+    <header>
+    <div id="sidebar">
+        <div>
+            <img src="https://t3.ftcdn.net/jpg/03/85/64/90/360_F_385649041_vxKgnZR0ZoLefxzY2W4SLjs9EO7Fracd.jpg" alt="">
+            <h2>Habit-Hole</h2>
+        <p style="text-align: center;"><i class="fa-solid fa-user" style="border: 1px solid;padding: 10px; border-radius: 50%;margin-bottom: 5px;;"></i><span id="name"></span></p>
+        <ul>
+          <li><a href="dashboard.html"> <i class="fa-solid fa-table-columns"></i> Dashboard</a></li>
+          <li><a href="focus.html"><i class="fa-solid fa-clock"></i> Focus</a></li>
+          <li><a href="challenge.html"><i class="fa-solid fa-child-combatant"></i> Challenges</a></li>
+          <li><a href="rewards.html"><i class="fa-solid fa-gift"></i> Rewards</a></li>
+          <li><p id="alert"><i class="fa-solid fa-bell"></i> Alert</p></li>
+        </ul>
+    
+        <select name="" id="theme">
+            <option value="light">𖤓 Light</option>
+            <option value="dark">☾ Dark</option>
+        </select>
+    
+        <button id="logoutBtn">Logout</button>
+    
+      </div>
+   </header>
+
+   
+
+    <main>
+
+
+        <div id="analysis"></div>
+
+        <div id="form" style="display: none;">
+            <p id="cross">&#10005</p>
+            <label for="habit">Habit</label>
+            <input type="text" id="habit" placeholder="e.g. Excercise">
+            <label for="goal">Goal</label>
+            <input type="number" id="goal" placeholder="days">
+            <label for="level">Difficulty</label>
+            <select name="" id="level">
+                <option value="">Level</option>
+                <option value="Easy">Easy</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Hard">Hard</option>
+            </select>
+            <label for="category">Category</label>
+            <select name="" id="category">
+                <option value="">Category</option>
+                <option value="Personal Development">Personal Development</option>
+                <option value="Health">Health</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Wellness">Wellness</option>
+            </select>
+            <button id="save">Add Habbit</button>
+        </div>
+
+    <div id="container"></div>
+
+    </main>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

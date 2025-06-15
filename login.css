@@ -1,0 +1,133 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+    height: 2rem;
+   display: flex;
+   justify-content: space-between;
+   padding: 30px 20px;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   animation: fadeInUp 0.8s ease-out;
+
+   }
+   nav img{
+    width: 50px;
+    border-radius: 50%;
+   }
+   nav a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 22px;
+}
+
+body {
+    background:  linear-gradient(to right, #43cea2, #185a9d);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#logIn {
+    margin: auto;
+    align-self: center;
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+    min-height: 350px;
+}
+
+#logIn h1 {
+    margin-top: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #333;
+    animation: fadeInUp 1s ease-out;
+    animation-delay: 0.1s;
+    animation-fill-mode: both;
+}
+
+#logIn input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+#login-email {
+    animation-delay: 0.2s;
+}
+#login-password {
+    animation-delay: 0.3s;
+}
+
+#logIn input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#loginBtn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #43cea2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: fadeInUp 0.8s ease-out;
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+}
+
+#loginBtn:hover {
+    background-color: #38b2ac;
+}
+
+#logIn p {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #555;
+    animation: fadeInUp 0.8s ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+#logIn a {
+    color: #185a9d;
+    text-decoration: none;
+}
+
+#logIn a:hover {
+    text-decoration: underline;
+}

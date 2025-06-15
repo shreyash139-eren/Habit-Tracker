@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/113f6f8016.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+            <img src="https://t3.ftcdn.net/jpg/03/85/64/90/360_F_385649041_vxKgnZR0ZoLefxzY2W4SLjs9EO7Fracd.jpg" alt="">
+            <p>Habit-Hole</p>
+            </div>
+            <div id="links">
+            <a href="#sec6" id="FT">Focus Timer</a>
+            <a href="#sec5" id="CH">Challenges</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Start Today</a>
+            </div>
+        </nav>
+    </header>
+
+    
+       
+        <main>
+            <section id="sec1">
+                <div id="intro">
+                  <h1 id="main">Welcome to Habit-Hole — Simple, Basic, and Surprisingly Helpful</h1>
+                  <p id="subMain">You've got issues. We've got a <span id="style">hole</span> for that.</p>
+                  <p id="sub2">A straightforward daily habit tracker to help you stay on track.</p>
+                  <button id="start">✅ Start Habit-Hole Today</button>
+                  <p id="fee">100% free, No Subscription needed.</p>
+                  <p id="last">Simple. Clear. Effective. A Habit Tracker That Just Works.</p>
+                </div>
+              </section>
+              
+
+              <section id="sec3">
+                <div id="users">
+                    <div class="user">
+                        <p>Total Users</p>
+                        <p id="users1"></p>
+                    </div>
+                    <div class="user">
+                        <p>Active Users</p>
+                        <p id="users2"></p>
+                    </div>
+                </div>
+            </section>
+        
+
+        <section id="sec2">
+            <div id="why">
+                <h1 id="whyHab"><u>Why Habit-Hole?</u></h1>
+                <p class="introText">
+                    Building new habits isn’t always easy — but with a little help and a lot less judgment,
+                    Habit-Hole makes it simple to track your progress, celebrate your wins, and keep moving forward.
+                  </p>
+            <ul>
+                <li>💪 Because consistency is hard, but tracking it can be fun.</li>
+                <li>✅ Turn “I’ll try tomorrow” into “I did it today.”</li>
+                <li>📈 Track your progress, not just your problems.</li>
+                <li>🎯 Because building better habits doesn’t have to be boring.</li>
+                <li>🌱 Morning yoga? No-spend days? Watering your dying plant? Whatever your habit, you can track it your way.</li>
+                <li>🧠 Easy to use, simple to understand — no user manual needed.</li>
+            </ul>
+            </div>
+        </section>
+
+        <section id="sec4">
+            <div>
+                <p>We care about you — and we know some days just feel off. That’s okay. Habit-Hole is here to support you. Every time you complete a goal, you earn coins as a reward💰. You can use these coins to buy fun and useful items from our store — because progress deserves a little celebration.</p>
+            </div>
+        </section>
+
+
+        <section id="sec5">
+            <p>Join Community Challenges and earn exciting rewards while building great habits!</p>
+        </section>
+
+       <section id="sec6">
+        <p>Focus Timer – Stay disciplined and focused during your work sessions.</p>
+       </section>
+
+          </main>
+          
+
+
+    <footer>
+    <div id="footer">
+        <div id="about">
+            <a href="#links">Home</a>
+            <a href="#sec2">About Us</a>
+            <a href="#sec4">Rewards</a>
+            <a href="#sec5">Challenges</a>
+            <a href="#sec6">Focus Timer</a>
+            <a href="register.html">Start Today</a>
+        </div>
+        <div id="contact">
+            <a href="https://www.facebook.com/shreyash.sinha.5473?mibextid=rS40aB7S9Ucbxw6v"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com/Shreyash_si139"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/kumar_shreyash_/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/kumar-shreyash-84079b205?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/shreyash139-eren"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div id="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i>2025 - Designed By - Shreyash</p>
+        </div>
+    </div>
+    </footer>
+
+
+    <script>
+        document.getElementById("start").addEventListener("click", () => {
+          window.location.href = "register.html";
+        });
+      
+        const user1 = document.getElementById("users1");
+        let count = 0;
+        const target = 13067;
+        const speed = 20; 
+      
+        const countUp = setInterval(() => {
+          if (count < target) {
+            count += Math.ceil((target - count) / speed); 
+            user1.textContent = count.toLocaleString();
+          } else {
+            clearInterval(countUp);
+            user1.textContent = target.toLocaleString();
+          }
+        }, speed);
+
+
+        const user2=document.getElementById("users2")
+        let count1=0
+        const target1=9876
+        const speed1=30
+
+        const countUp1=setInterval(() => {
+            if(count1<target1){
+                count1+=Math.ceil((target1-count1)/speed)
+                user2.textContent=count1.toLocaleString()
+            }else{
+                clearInterval(countUp1)
+                user2.textContent=target1.toLocaleString()
+            }
+        }, speed1);
+
+        document.getElementById("challenges").addEventListener("click",()=>{
+            
+        })
+      </script>
+      
+</body>
+</html>

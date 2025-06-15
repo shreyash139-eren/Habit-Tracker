@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f1115;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding: 0 20px;
+    background-color: #1a1d23;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav img {
+    width: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav p,
+nav a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #f5f5f5;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00ff85;
+}
+
+#logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#ancor {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#wallet {
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 6px 12px;
+    background: #262b34;
+}
+
+#container {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+#container div {
+    background: #1f232b;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    filter: blur(0px);
+}
+
+#container div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 255, 150, 0.15);
+    border-color: #00ff85;
+    filter: blur(0px);
+}
+
+#container div img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 180px;
+    margin-bottom: 12px;
+}
+
+#container div p {
+    margin-top: 6px;
+    font-size: 15px;
+}
+
+.title {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.red {
+    background-color: #ff4c4c;
+    color: white;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+#apolo {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffdf6b;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #333;
+    color: #888;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    #ancor {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #container {
+        grid-template-columns: 1fr;
+    }
+
+    #container div img {
+        height: 160px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+
+            <img src="https://t3.ftcdn.net/jpg/03/85/64/90/360_F_385649041_vxKgnZR0ZoLefxzY2W4SLjs9EO7Fracd.jpg" alt="">
+            <p id="logo">Habit-Hole</p>
+            </div>
+            <div id="ancor">
+            <p id="wallet">coins : <span id="coin"></span></p>
+            <a href="dashboard.html">Back to Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="apolo"><div>😅 Oops! We're out of stock. Refilling the Habit-Hole as we speak!</div>
+    </div>
+        <div id="container">
+            <div>
+                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/alienware/peripherals/alienware-trimode-920k-wireless-keyboard/media-gallery/dsotm/keyboard-alienware-aw920k-black-gallery-2.psd?fmt=pjpg&pscan=auto&scl=1&wid=4850&hei=3324&qlt=100,1&resMode=sharp2&size=4850,3324&chrss=full&imwidth=5000" alt="">
+                <p class="title">Alienware Tri-Mode Wireless Gaming Keyboard - AW920K</p>
+                <p class="red">Stock : Out of Stock</p>
+                <p>Price : 30,000 coins</p>
+            </div>
+
+            <div>
+                <img src="https://www.mkaugaming.com/wp-content/uploads/2019/04/aw7681.jpg" alt="">
+                <p class="title">Alienware AW768 Pro Gaming Keyboard – REVIEW</p>
+                <p class="red">Stock : Out of Stock</p>
+                <p>Price : 35,000 coins</p>
+            </div>
+
+            <div>
+                <img src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/819eNuXA-NL._SX425_.jpg" alt="">
+                <p class="title">Alienware 610M Wired/Wireless Gaming Mouse</p>
+                <p class="red">Stock : Out of Stock</p>
+                <p>Price : 10,000 coins</p>
+            </div>
+
+            <div>
+                <img src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/2893d34a-9ef0-4a94-9044-5357ff22decd/JORDAN+PRO+ELE+INGOT+CAP.png" alt="">
+                <p class="title">Jordan Pro Ingot</p>
+                <p class="red">Stock : Out of Stock</p>
+                <p>Price : 10,000 coins</p>
+            </div>
+
+            <div>
+                <img src="https://m.media-amazon.com/images/I/81SpTOTVQAL.jpg" alt="">
+                <p class="title">vivo T4x 5G (Pronto Purple, 128 GB)  (6 GB RAM)</p>
+                <p class="red">Stock : Out of Stock</p>
+                <p>Price : 50,000 coins</p>
+            </div>
+
+            <div>
+                <img src="https://m.media-amazon.com/images/I/71vkB1WIouL._AC_UF1000,1000_QL80_.jpg" alt="">
+                <p class="title">POCO M6 Plus 5G (Misty Lavender, 128 GB)  (6 GB RAM)</p>
+                <p class="red">Stock : Out of Stock</p>
+                <p>Price : 40,000 coins</p>
+            </div>
+
+            <div>
+                <img src="https://sathya.in/media/91270/catalog/ear1%20(2).jpg?size=600" alt="">
+                <p class="title">Sony WI-C100 Wireless Headphones</p>
+                <p class="red">Stock : Out of Stock</p>
+                <p>Price : 8,000 coins</p>
+            </div>
+
+            <div>
+                <img src="https://food.fnr.sndimg.com/content/dam/images/food/products/2021/1/26/rx_rachael-ray-create-delicious-nonstick-cookware-pots-and-pans-set-13-piece.jpeg.rend.hgtvcom.616.616.85.suffix/1611697745590.webp" alt="">
+                <p class="title">Blue Diamond Pan Cookware-Set, 14 Piece</p>
+                <p class="red">Stock : Out of Stock</p>
+                <p>Price : 20,000 coins</p>
+            </div>
+
+            <div>
+                <img src="https://images-cdn.ubuy.co.in/64cb596223052b10d7329507-great-value-deluxe-mixed-nuts-30-oz.jpg" alt="">
+                <p class="title">Great Value Deluxe Mixed Nuts, 30 oz</p>
+                <p class="red">Stock : Out of Stock</p>
+                <p>Price : 20,000 coins</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        document.getElementById("coin").innerText=localStorage.getItem("coins")
+    </script>
+</body>
+</html>

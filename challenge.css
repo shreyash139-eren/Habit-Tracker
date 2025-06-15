@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #161B22;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    border-bottom: 1px solid rgb(162, 162, 162);
+}
+nav img{
+    width: 40px;
+    border-radius: 50%;
+}
+nav div{
+    display: flex;
+    align-items: center;
+}
+nav p{
+    font-size: 20px;
+    margin-left: 10px;
+    color: white;
+}
+nav a{
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: rgb(227, 227, 227);
+}
+nav a:hover{
+    color: rgb(3, 247, 3);
+}
+#sec1{
+    background-image: url("https://i.pinimg.com/736x/67/53/a9/6753a9575b19bb909f1d8218cbf62096.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sec1 h3{
+    width: 80vw;
+    color: beige;
+    font-size: 20px;
+}
+#sec2{
+    margin-top: 2px;
+}
+#challenges div img{
+    width: 100vw;
+}
+#push{
+    margin: auto;
+    margin-bottom: 1px;
+    background-image: url("https://i.pinimg.com/736x/53/59/cc/5359cc29a70e9e1061b6c4326668df06.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+}
+#push h1{
+    text-align: center;
+    font-size: 30px;
+}
+#push h4{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+}
+#list{
+    margin-left: 50px;
+    margin-top: 30px;
+    font-size: 22px;
+}
+#sec2 li{
+    margin-left: 100px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+#lastp{
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+#pushBtn{
+    text-align: center;
+    margin-top: 20px;
+}
+#PushUp{
+    padding: 10px;
+    width: 130px;
+    background-color: rgb(37, 232, 115);
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+#PushUp:hover{
+    background-color: rgb(0, 255, 0);
+}
+#hydrate{
+    margin: auto;
+    margin-bottom: 1px;
+    background-image: url("https://t4.ftcdn.net/jpg/10/10/66/17/360_F_1010661767_ud7r1EJK9rmiOZRm6hFzRJaTVS4rpF6u.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+#hydrate h1{
+    text-align: center;
+    font-size: 30px;
+}
+#hydrate h4{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+}
+#list1{
+    margin-left: 50px;
+    margin-top: 30px;
+    font-size: 22px;
+}
+#hydrate li{
+    margin-left: 100px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+#lastP1{
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+#hydraBtn{
+    text-align: center;
+    margin-top: 20px;
+}
+#hydra{
+    padding: 10px;
+    width: 130px;
+    background-color: rgb(37, 232, 115);
+    color: beige;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+#hydra:hover{
+    background-color: rgb(0, 255, 0);
+}
+@media (width<500px){
+    div li{
+        margin-left: 0;
+    }
+}
