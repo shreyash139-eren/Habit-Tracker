@@ -34,18 +34,18 @@ State & Storage: localStorage, Firebase Realtime DB
 Add screenshots or demo GIFs here for each key section:
 
 Login/Signup
-![Login Page](./assets/login.png)
+![Login Page](./src/assets/login.png)
 
 Dashboard
-![Dashboard](./assets/addingHabbit.png)
+![Dashboard](./src/assets/addingHabbit.png)
 
 
 Reward system
-![Rewards](./assets/arewards.png)
+![Rewards](./src/assets/arewards.png)
 
 
 Focus Timer
-![Focus Timer](./assets/focusTimer.png)
+![Focus Timer](./src/assets/focusTimer.png)
 
 ## Live Link
 https://habit-hole.netlify.app/ 
